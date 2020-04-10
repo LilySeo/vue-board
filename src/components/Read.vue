@@ -14,7 +14,7 @@
           <td>{{ index + 1 }}</td>
           <td>{{ data.title }}</td>
           <td>{{ data.content }} </td>
-          <td>{{ data.wirter }}</td>
+          <td>{{ data.writer }}</td>
         </tr>
       </tbody>
     </table>
