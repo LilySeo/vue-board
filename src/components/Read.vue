@@ -18,6 +18,8 @@
         </tr>
       </tbody>
     </table>
+
+    <button @click="write">글쓰기</button>
   </div>
 </template>
 
@@ -29,6 +31,14 @@ export default {
   data() {
     return {
       datas: data
+    }
+  },
+  methods: {
+    write() {
+      console.log("글쓰기")
+      this.$router.push({
+        path: 'create'
+      })
     }
   }
 }
