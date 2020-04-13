@@ -34,6 +34,9 @@ export default {
       })
     },
     clear() {
+      this.$router.push({
+        path: '/'
+      })
     }
   
   }

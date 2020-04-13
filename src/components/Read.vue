@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(data, index) in datas" :key="index">
+        <tr v-for="(data, index) in datas" :key="index" @click="detail(index)">
           <td>{{ index + 1 }}</td>
           <td>{{ data.title }}</td>
           <td>{{ data.content }} </td>
@@ -37,7 +37,18 @@ export default {
     write() {
       console.log("글쓰기")
       this.$router.push({
+        // object
         path: 'create'
+      })
+    },
+    detail(index) {
+      // console.log(index)
+      this.$router.push({
+        // 이름을 가지는 라우트
+        name: 'Detail',
+        params: {
+          contentId: index
+        }
       })
     }
   }
@@ -47,5 +58,9 @@ export default {
 <style>
 table td {
   border: 1px solid #ddd;
+}
+
+table tr {
+  cursor: pointer;
 }
 </style>
