@@ -2,9 +2,9 @@
   <div>
     <div>{{ datas.title }}</div>
     <div>{{ datas.content }}</div>
-    <div>{{ datas. writer }}</div>
-    <button @click="dataUpdate()">수정</button>
-    <button @click="dataDelete()">삭제</button>
+    <div>{{ datas.writer }}</div>
+    <button @click="dataUpdate">수정</button>
+    <button @click="dataDelete">삭제</button>
   </div>
 </template>
 
@@ -16,7 +16,8 @@ export default {
   data() {
     const index = this.$route.params.contentId
     return {
-      datas: data[index]
+      datas: data[index],
+      index: index
     }
   },
   methods: {
@@ -24,7 +25,7 @@ export default {
       this.$router.push({
         name: 'Create',
         params: {
-          
+          contentId: this.index
         }
       })
     },
