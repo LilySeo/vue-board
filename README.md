@@ -22,7 +22,6 @@ Create a project:
 ```
 vue create homework_2
 cd homework_2
-
 ```
 
 ### Compiles and hot-reloads for development
